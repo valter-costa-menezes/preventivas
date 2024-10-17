@@ -1,0 +1,102 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo total */
+}
+
+body {
+    background-color: #f0f0f0; /* Fundo suave */
+    color: #333; /* Texto escuro */
+    font-family: Arial, sans-serif;
+}
+
+.link {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.link a {
+    padding: 12px 18px;
+    background-color: #1e3a8a; /* Azul suave */
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s; /* Adicionando uma leve animação */
+}
+
+.link a:hover {
+    background-color: #357ab8; /* Azul um pouco mais escuro */
+    transform: translateY(-2px); /* Efeito de levantar ao passar o mouse */
+}
+
+.tabela {
+    margin: 20px;
+    overflow-x: auto; /* Permite rolagem horizontal em telas menores */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;  
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd; /* Bordas mais suaves */
+    /* text-align: left; */
+}
+
+th {
+    background-color: #e8f4fa; /* Fundo claro para cabeçalhos */
+    color: #4a90e2; /* Texto azul suave */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Linhas alternadas com leve contraste */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Destaque sutil ao passar o mouse */
+}
+
+.btn_salvar {
+    background-color: #1e3a8a; /* Azul suave */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+.btn_salvar:hover {
+    background-color: #357ab8; /* Azul mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levantar ao passar o mouse */
+}
+
+.notification-dot {
+    display: none;
+    width: 8px; /* Tamanho reduzido para um visual mais discreto */
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff6b6b; /* Vermelho suave para notificação */
+
+}
+
+
+#filtro-maquina {
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 15px;
+    background-color: #fcfcfc;
+    border: 1px solid blue;
+}
+
+#filtro-maquina:focus{
+    background-color: #f9f9f9;
+    border: 1px solid blue;
+
+}

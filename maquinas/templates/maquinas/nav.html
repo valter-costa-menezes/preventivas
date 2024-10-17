@@ -1,0 +1,155 @@
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">PREVENTIVAS SANTANA</a></li>
+        <li><a href="{% url 'adicionarMaquina' %}">MÁQUINAS</a></li>
+        <li class="login-logout">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">logout</a>
+    
+            {% else %}
+                <a href="{% url 'login' %}">login</a>
+            {% endif %}
+        </li>
+    </ul>
+
+
+</nav>
+
+<style>
+    nav {
+        background-color: #1e3a8a; /* Azul escuro */
+        font-size: 20px; 
+        padding: 10px;
+        margin-bottom: 50px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0; /* Remove padding padrão */
+    }
+
+    nav li {
+        margin: 10px 0; /* Espaçamento vertical entre os itens */
+    }
+
+    .login-logout{
+        font-size: 18px;
+        width: 100px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white; /* Texto branco */
+        padding: 10px 15px; /* Espaçamento interno */
+        border-radius: 5px; /* Cantos arredondados */
+        display: block; /* Faz com que o link ocupe toda a área do item */
+        transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    } 
+
+    nav a:hover {
+        background-color: #3b82f6; /* Azul mais claro ao passar o mouse */
+        transform: scale(1.01); /* Aumenta um pouco o tamanho ao passar o mouse */
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: 200px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-column {
+        flex: 1;
+        min-width: 200px;
+        margin: 20px 0;
+    }
+
+    .footer-column h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #f0f0f0;
+    }
+
+    .footer-column p, .footer-column ul {
+        font-size: 14px;
+        color: #ddd;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin: 8px 0;
+    }
+
+    .footer-column ul li a {
+        color: #ddd;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+        color: #fff;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #aaa;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+</style>
+
+{% block content %}
+
+{% endblock content %}
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>Sobre Nós</h4>
+            <p>Esse projeto foi desenvolvido como trabalho academico e é dedicado ao controle e gestão de manutenção em empilhadeiras de uma empresa localizada em goiânia-go</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contate-nos</h4>
+            <ul>
+                <li>Email: valtervcm4@gmail.com</li>
+                <li>Telefone: (62) 99655-0922 </li>
+                
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Siga-nos</h4>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Empilhadeira Santana.</p>
+    </div>
+</footer>

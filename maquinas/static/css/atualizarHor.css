@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+nav {
+    padding: 1px;
+    color: whitesmoke;
+    transition: color 0.3s;
+    /* max-height: 100px; */
+}
+
+nav a{
+    margin: 1px;
+    max-height: 40px;
+} 
+
+nav a:hover{
+    text-decoration: none;
+    color: white;
+} 
+
+
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 10px; 
+    margin: 20px; 
+}
+
+form {
+    margin: 20px; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="number"], input[type="text"]{
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #1e3a8a; /* Bordas azuis */
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    margin-top: 10px;
+    transition: border-color 0.3s, background-color 0.3s; /* Adicionando transição ao fundo */
+}
+
+label{
+    display: flex;
+    justify-content: left;
+    /* align-items: normal; */
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3b82f6; /* Azul mais claro ao focar */
+    /* outline: none; */
+    background-color: #ffffff; /* Fundo branco ao focar */
+}
+
+button {
+    
+    background-color: #1e3a8a; /* Azul */
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px; /* Mais padding para os botões */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Adicionando sombra em transição */
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #3b82f6; /* Azul mais claro ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
+}
+
+table {
+    margin: 20px; 
+    width: 98%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px; 
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #e0f2fe; /* Fundo claro para cabeçalhos */
+    color: #1e3a8a; /* Texto azul */
+}
+
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+a {
+    color: #1e3a8a; /* Azul */
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s; /* Transição suave para links */
+}   
+
+a:hover {
+    text-decoration: underline;
+    color: #3b82f6; /* Azul mais claro ao passar o mouse */
+}
+
+#toggleFormButton{
+    margin: 20px; 
+}
+
+
+.maquina{
+    font-size: 25px;
+    text-align: left;
+
+}
+
+.faltam, .passou{
+    font-size: 20px;
+    color: rgb(240, 55, 55);
+}
+
+.mensagem{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.lista-pecas{
+    width: 500px;
+}
+
+
+.lista-pecas, ul{
+    list-style: none;
+    padding: 20px;
+}
+
+
+.lista-pecas, li{
+    padding: 3px;
+}
+
+
+.lista-pecas:hover{
+    cursor: pointer;
+}
+
+.titulos{
+    width: 100%;
+    text-align: center;
+}
