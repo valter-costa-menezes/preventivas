@@ -56,7 +56,9 @@ ROOT_URLCONF = 'Preventivas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/root/projeto/Preventivas/maquinas/templates/maquinas/nav.html'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
