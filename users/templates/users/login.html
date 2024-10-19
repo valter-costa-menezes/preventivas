@@ -1,5 +1,40 @@
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">PREVENTIVAS SANTANA</a></li>
+    </ul>
+</nav>
+<style>
+    nav {
+        background-color: #1e3a8a; /* Azul escuro */
+        font-size: 20px; 
+        padding: 10px;
+        margin-bottom: 50px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    }
 
+    nav ul {
+        list-style-type: none;
+        padding: 0; /* Remove padding padrão */
+    }
 
+    nav li {
+        margin: 10px 0; /* Espaçamento vertical entre os itens */
+  }
+        nav a {
+        text-decoration: none;
+        color: white; /* Texto branco */
+        padding: 10px 15px; /* Espaçamento interno */
+        border-radius: 5px; /* Cantos arredondados */
+        display: block; /* Faz com que o link ocupe toda a área do item */
+        transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    } 
+
+    nav a:hover {
+        background-color: #3b82f6; /* Azul mais claro ao passar o mouse */
+        transform: scale(1.01); /* Aumenta um pouco o tamanho ao passar o mouse */
+    }
+</style>
+    
 {% load   static %}
 
 {% block content %}
