@@ -2,14 +2,7 @@
     <ul>
         <li><a href="{% url 'index' %}">PREVENTIVAS SANTANA</a></li>
         <li><a href="{% url 'adicionarMaquina' %}">MÁQUINAS</a></li>
-        <li class="login-logout">
-            {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">logout</a>
-    
-            {% else %}
-                <a href="{% url 'login' %}">login</a>
-            {% endif %}
-        </li>
+
     </ul>
 
 
