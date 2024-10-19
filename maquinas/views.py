@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 # FUNÇÃO QUE CRIA A PÁGINA INICAIAL
 
-@login_required
+#@login_required
 def index(request):
     # VARIAVEL QUE PEGA TODOS OS OBJETOS DENTRO DA MODELS UltimaPreventiva
     maq = AdicionarMaquina.objects.all()
@@ -130,7 +130,7 @@ def index(request):
 #     return render(request, 'maquinas/pecas.html', context)
 
 
-@login_required
+#@login_required
 def atualizarHor(request, maq_id):
     id_maq = AdicionarMaquina.objects.get(id = maq_id)
 
@@ -188,44 +188,7 @@ def atualizarHor(request, maq_id):
                }
     return render(request, 'maquinas/atualizarHor.html', context)
 
-
-# ------------------------------------logica não utilizada------------------------------------
-# # LÓGICA PARA PAGINA DE PREVENTIVAS PENDENTES
-# @login_required
-# def pendentes(request):
-
-#     # PEGA OS VALORES DE ultimo_horimetro DA session SE NÃO HOUVER DEFINE O VALOR COMO None
-#     ultimo_horimetro = request.session.get('ultimo_horimetro', None)
-
-#     # CRIA UMA LISTA VAZIA QUE SERAM ARMAZENADAS AS MÁQUINAS QUE PRECISAM DE PREVENTIVA
-#     maq_manutencao = []
-    
-#     # CRIA UMA VARIAVEL QUE PEGA TODOS OS OBJETOS DENTRO DE Ultimapreventiva
-#     maquinas = UltimaPreventiva.objects.all()
-
-#     # PARA QUALQUER ITEM DENTRO DE maquinas
-#     for maquina in maquinas:
-
-#         # TENTA PEGAR O REGISTRO MAIS RECENTE DE Patrimonio QUE CORRESPONDE A FROTA
-#         try:
-#             ultimo_horimetro = Patrimonio.objects.filter(frota=maquina.frota).latest('id').horimetro
-
-#             # SE O ultimo_horimetro FOR IGUAL O MAIOR QUE A proximaPrev ENÃO É ADICIONADO DENTRO DA LISTA VAZIA 
-#             if ultimo_horimetro >= maquina.proximaPrev:
-#                 maq_manutencao.append({'maquina': maquina, 'ultimo_horimetro': ultimo_horimetro})
-        
-#         # CASO NÃO HAJA REGISTRO DENTRO DE Patrimonio ENTÃO CONTINUA PARA A PROXIMA MÁQUINA
-#         except Patrimonio.DoesNotExist:
-#             continue
-    
-#     # CRIA UM DICIONARIO COM VALORES DE maq_manutencao, ultimo_horimetro 
-#     context = {'maq_manutencao': maq_manutencao, 'ultimo_horimetro': ultimo_horimetro}
-
-#     # RENDERIZA A PÁGINA PARA O CAMINHO maquinas/pendentes.html E O ADICIONA O CONTEXT PARA SER USADO NO pendentes.hrml
-#     return render(request, 'maquinas/pendentes.html', context)
-
-
-@login_required
+#@login_required
 def adicionarMaquina(request):
 
     if request.method != 'POST':
